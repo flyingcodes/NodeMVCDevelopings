@@ -1,11 +1,21 @@
+@layout ("layout")
 @{
 	var time = new Date;
 }
-<html>
-	<head ;="" ) a=b />
-		<title>@(time)</title>
-	</head>
-	<body>
+@section first{
+	for(var i = 0; i++ < 5;) {
+		<div>@i : section first. section first. section first.</div>
+	}
+}
+<div>
+	<div ;="" ) a=b />
+		<span>time=@(time)</span>
+	</div>
+	<div style="background: #56ec26">
+		<div>render section in page:</div>
+		<div style="padding: 20px;">@this.renderSection('first')</div>
+	</div>
+	<div>
 		<p>viewModel=@viewModel</p>
 	<p>first 1234567890</p>
 @{
@@ -24,8 +34,8 @@
 @(abcd + ' : ' + time)
 
 <button onclick="alert(this.getAttribute('info'))" info="hello! @viewModel.name">click me</button>
-<div>@abcd[1 + 2 - 3 + 1]<div>
-	<div>@func(abcd[1 + 2 - 3 + 1] + "gggg").length<div>
+<div>@abcd[1 + 2 - 3 + 1]</div>
+	<div>@func(abcd[1 + 2 - 3 + 1] + "gggg").length</div>
 		
 @for(var i = 0; i < 5; i++){
 	var s = "sss" + i;
@@ -64,6 +74,10 @@
 	var s = "obj[" + i + "] = \"" + obj[i] + "\""<div style="padding:10px;">@s</DIV>
 }		
 	
-	</body>
-</html>
+	</div>
+	<div style="background: #5626ec">
+		<div>render section in page:</div>
+		<div style="padding: 20px;">@this.renderSection('second')</div>
+	</div>
+</div>
 @{var end = "end"}@(end).@

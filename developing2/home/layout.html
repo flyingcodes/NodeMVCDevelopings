@@ -1,0 +1,35 @@
+<html>
+	<head><title>layout.html</title></head>
+	<body>
+
+@for(var i = 0; i < 5; i++) {
+	<div><span style="color: #ac66ff; padding-right: 5px;">@i</span>@(new Date())</div>
+}
+@for(var i = 0; i < 5; i++) {
+	<div><span style="color: #ac66ff; padding-right: 5px;">xxxxxxxxx</div>
+}
+@this.renderSection('xxxxxxx')
+<div style="margin: 10px 0; border: solid 1px #fc1212; padding: 15px;">
+@this.renderSection('first', true)
+</div>
+
+<div style="margin: 30px 50px; background-color: #ececec; border: solid 1px #a8a8a8; padding: 30px; max-height: 500px; overflow-y: auto; width: 600px; ">
+
+@this.renderContentPage()	
+	
+</div>
+@for(var i = 0; i < 5; i++) {
+	<div style="background-color: #ac8989"><span style="color: #ffffff; padding: 0 5px;">@i</span>@(new Date())</div>
+}
+
+<div style="margin: 10px 0; border: solid 1px #12fc12; padding: 15px;">
+@this.renderSection('second')
+</div>
+	</body>
+	
+</html>
+@section second{
+	for(var i = 0; i++ < 5;) {
+		<div>@i : section second. section second. section second.</div>
+	}
+}
